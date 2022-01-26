@@ -1,3 +1,22 @@
+##################################################################
+##
+##                       DOCUMENTATION
+##
+##################################################################
+#
+#
+# @file	anagramOf.py
+# @version	1
+# @author	Kiran S
+# @short	AnagramFinder
+# Implementation of Anagram Finder using recursion and loops
+#
+# <p>
+# See GIT for detailed history.
+# <p>
+# Copyright (c) 2021 Kiran S. All rights reserved.
+#
+##################################################################
 def anagramOf(string):
     if len(string) <= 1:
         return string[0:]
@@ -10,6 +29,8 @@ def anagramOf(string):
             newAnagram.insert(index, string[0])
             collections.append("".join(newAnagram))
     
+    #print("Collection Growth: ", collections)
+    #print()
     return collections
 
 #Test Anagrams
