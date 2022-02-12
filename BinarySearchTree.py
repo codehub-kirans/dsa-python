@@ -5,7 +5,7 @@
 ##################################################################
 #
 #
-# @file	LinkedList.py
+# @file	BinarySearchTree.py
 # @version	1
 # @author	Kiran S | R&D Manager
 # @short	BinarySearchTree implementation
@@ -19,19 +19,18 @@
 ##################################################################
 
 """A Binary Search Tree Implementation"""
-
 class TreeNode:
     def __init__(self, data, leftChild = None, rightChild = None) -> None:
         self.data = data
         self.leftChild = leftChild
         self.rightChild = rightChild
-
 class BinarySearchTree:
     rootNode: TreeNode
 
     def __init__(self, node: TreeNode = None) -> None:
         self.rootNode = node
 
+    #search for a node
     def search(self, data, node: TreeNode = None, searchFromRoot = True):
         #setup search from root
         if searchFromRoot:
@@ -48,7 +47,7 @@ class BinarySearchTree:
         elif data > currentNode.data:
             return self.search(data, currentNode.rightChild, False)
 
-    #insert values
+    #insert nodes
     def insert(self, data, node: TreeNode = None, searchFromRoot = True):
         #setup search from root
         if searchFromRoot:
