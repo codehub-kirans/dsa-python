@@ -19,11 +19,13 @@
 ##################################################################
 
 """A Binary Search Tree Implementation"""
+
 class TreeNode:
     def __init__(self, data, leftChild = None, rightChild = None) -> None:
         self.data = data
         self.leftChild = leftChild
         self.rightChild = rightChild
+        
 class BinarySearchTree:
     rootNode: TreeNode
 
